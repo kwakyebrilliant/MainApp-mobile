@@ -1,10 +1,11 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, Text, View} from 'react-native';
 
   const App = () => {
   return (
     <View style={styles.body}>
       <Text style={styles.text}>Programming with Brilliant</Text>
+      <Button title="learn coding"></Button>
     </View>
   );
 };
