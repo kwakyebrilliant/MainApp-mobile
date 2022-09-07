@@ -4,7 +4,7 @@ import {StyleSheet, Text, View} from 'react-native';
   const App = () => {
   return (
     <View style={styles.body}>
-      <Text>Programming with Brilliant</Text>
+      <Text style={styles.text}>Programming with Brilliant</Text>
     </View>
   );
 };
@@ -12,9 +12,13 @@ import {StyleSheet, Text, View} from 'react-native';
 const styles = StyleSheet.create({
   body: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  text: {
+    color: '#fff',
+    fontSize: 20,
   },
 });
 
