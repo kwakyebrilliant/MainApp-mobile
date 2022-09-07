@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Button, StyleSheet, Text, View, Linking} from 'react-native';
 
   const App = () => {
+    const [name, setName] = useState('Brilliant');
   return (
     <View style={styles.body}>
       <Text style={styles.text}>Programming with Brilliant</Text>
