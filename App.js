@@ -5,20 +5,48 @@ import {
   View,
   TextInput,
   Pressable,
-  Alert,
-  ToastAndroid,
   Modal,
 } from 'react-native';
 
 const App = () => {
   const [name, SetName] = useState('');
   const [submitted, SetSubmitted] = useState(false);
+  const [showWarning, SetshowWarning] = useState(false);
   const onPressHandler = () => {
-    SetSubmitted(!submitted);
+    if (name.length > 3) {
+      SetSubmitted(!submitted);
+    } else {
+      SetshowWarning(true);
+    }
   };
   return (
     <View style={styles.body}>
-      <Text style={styles.text}>Please write your name: </Text>
+      <Modal
+        visible={showWarning}
+        transparent
+        onRequestClose={() => SetshowWarning(false)}
+        animationType="slide"
+        hardwareAccelerated>
+        <View style={styles.centered_view}>
+          <View style={styles.warning_modal}>
+            <View style={styles.warning_title}>
+              <Text style={styles.text}>WARNING!</Text>
+            </View>
+            <View style={styles.warning_body}>
+              <Text style={styles.text}>
+                The name must be longer than 3 charachters
+              </Text>
+            </View>
+            <Pressable
+              onPress={() => SetshowWarning(false)}
+              style={styles.warning_button}
+              android_ripple={{color: '#fff'}}>
+              <Text style={styles.text}>OK</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
+      <Text style={styles.text}>Please write your name:</Text>
       <TextInput
         style={styles.input}
         placeholder="e.g. John"
