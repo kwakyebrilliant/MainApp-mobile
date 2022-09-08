@@ -17,8 +17,10 @@ const App = () => {
   ]);
   return (
     <View style={styles.body}>
-      <Text style={styles.text}>Item 1</Text>
-  </View>
+      <View style={styles.item}>
+        <Text style={styles.text}>Item 1</Text>
+      </View>
+    </View>
   );
 };
 
@@ -27,9 +29,12 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     backgroundColor: '#fff',
+  },
+  item: {
+    margin: 10,
+    backgroundColor: '#4ae1fa',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 10,
   },
   text: {
     color: '#000000',
