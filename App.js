@@ -72,7 +72,6 @@ const App = () => {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
-    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -127,6 +126,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#00ffff',
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
+  },
+  image: {
+    width: 100,
+    height: 100,
+    margin: 10,
   },
 });
 
