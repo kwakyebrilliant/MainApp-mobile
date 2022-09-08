@@ -4,7 +4,7 @@ import {Button, StyleSheet, Text, View} from 'react-native';
 const App = () => {
   const [name, setName] = useState('Style test');
   const onClickHandler = () => {
-    setName('Programming with Brilliant');
+    setName('Style Test is Done!');
   };
   return (
     <View style={styles.body}>
