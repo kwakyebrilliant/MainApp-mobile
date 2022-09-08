@@ -20,10 +20,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     justifyContent: 'center',
     alignItems: 'center',
+    borderWidth: 10,
+    borderColor: '#ff00ff',
+    borderRadius: 10,
   },
   text: {
     color: '#fff',
-    fontSize: 20,
+    fontSize: 35,
+    fontStyle: 'italic',
+    margin: 10,
+    textTransform: 'uppercase',
+  },
+  button: {
+    width: 200,
+    height: 60,
   },
 });
 
