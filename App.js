@@ -1,15 +1,29 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, TextInput} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  Button,
+  TouchableOpacity,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+  Pressable,
+} from 'react-native';
 
 const App = () => {
   const [name, SetName] = useState('');
+  const [submitted, SetSubmitted] = useState(false);
+  const onPressHandler = () => {
+    SetSubmitted(!submitted);
+  }
   return (
     <View style={styles.body}>
       <Text style={styles.text}>Please write your name: </Text>
       <TextInput
         style={styles.input}
-        placeholder='e.g. John'
-        onChangeText={(value) => SetName(value)}
+        placeholder="e.g. John"
+        onChangeText={value => SetName(value)}
       />
       <Text style={styles.text}>Your name is: {name}</Text>
     </View>
