@@ -3,10 +3,13 @@ import {Button, StyleSheet, Text, View, Linking} from 'react-native';
 
   const App = () => {
     const [name, setName] = useState('Brilliant');
+    const onClickHandler = () => {
+      setName('Programming with Brilliant')
+    }
   return (
     <View style={styles.body}>
-      <Text style={styles.text}>My name is {name}</Text>
-      <Button title="learn coding" onPress={() => {Linking.openURL('https://www.youtube.com/watch?v=1lg_IXtjles&list=PL8kfZyp--gEXs4YsSLtB3KqDtdOFHMjWZ&index=6')}}></Button>
+      <Text style={styles.text}>{name}</Text>
+      <Button title="Update state" onPress={onClickHandler}></Button>
     </View>
   );
 };
