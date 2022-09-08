@@ -6,6 +6,12 @@ const App = () => {
   return (
     <View style={styles.body}>
       <Text style={styles.text}>Please write your name: </Text>
+      <TextInput
+        style={styles.input}
+        placeholder='e.g. John'
+        onChangeText={(value) => SetName(value)}
+      />
+      <Text style={styles.text}>Your name is: {name}</Text>
     </View>
   );
 };
