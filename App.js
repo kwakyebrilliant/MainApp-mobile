@@ -34,6 +34,12 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     textAlign: 'center',
     fontSize: 20,
+    marginBottom: 10,
+  },
+  button: {
+    width: 150,
+    height: 50,
+    alignItems: 'center',
   },
 });
 
