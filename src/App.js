@@ -5,16 +5,24 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
-function App(){
-  return(
-    <NavigationContainer>
+function ScreenA() {
+  return (
+    <View>
+      <Text>Screen A</Text>
+    </View>
+  );
+}
 
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Screen_A" component={ScreenA} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
-};
+}
 
-const styles = StyleSheet.create({
-  
-});
+const styles = StyleSheet.create({});
 
 export default App;
