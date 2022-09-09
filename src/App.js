@@ -73,7 +73,7 @@ const App = () => {
           <Text style={styles.text}>You are registered as {name}</Text>
           <Image
             style={styles.image}
-            source={require('./assets/done.png')}
+            source={require('../assets/done.png')}
             resizeMode="stretch"
           />
         </View>
