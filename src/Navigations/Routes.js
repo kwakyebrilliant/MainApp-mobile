@@ -11,7 +11,7 @@ function Routes() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Profile" component={Profile} />
-        <Stack.Screen name="Explore" component={Explore} />
+        <Stack.Screen name="Explore" component={Explore} /> 
       </Stack.Navigator>
     </NavigationContainer>
   );
