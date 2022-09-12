@@ -9,6 +9,7 @@ const Home = ({navigation}) => {
   };
   return (
     <View style={styles.container}>
+      <Text>This is Home Screen</Text>
       <Button onPress={goToScreen} title="Go To Profile" />
     </View>
   );
