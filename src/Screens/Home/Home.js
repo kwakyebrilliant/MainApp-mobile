@@ -5,7 +5,7 @@ import styles from './styles';
 
 const Home = ({navigation}) => {
   const goToScreen = () => {
-    navigation.navigate(navigationStrings.PROFILE);
+    navigation.navigate(navigationStrings.PROFILE, {titile: 'Subscribe'});
   };
   return (
     <View style={styles.container}>
