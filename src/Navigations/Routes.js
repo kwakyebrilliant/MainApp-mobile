@@ -10,7 +10,11 @@ function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName={navigationStrings.HOME}>
-        <Stack.Screen name={navigationStrings.HOME} component={Home} />
+        <Stack.Screen
+          options={{title: 'My Home'}}
+          name={navigationStrings.HOME}
+          component={Home}
+        />
         <Stack.Screen name={navigationStrings.PROFILE} component={Profile} />
         <Stack.Screen name={navigationStrings.EXPLORE} component={Explore} />
       </Stack.Navigator>
