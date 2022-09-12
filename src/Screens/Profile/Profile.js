@@ -15,6 +15,7 @@ const Profile = ({navigation, route}) => {
       <Text>This is params data: {title}</Text>
       <Text>Profile</Text>
       <Button onPress={goToScreen} title="Go To Explore" />
+      <Button onPress={() => navigation.goBack()} title="Go Back" />
     </View>
   );
 };
