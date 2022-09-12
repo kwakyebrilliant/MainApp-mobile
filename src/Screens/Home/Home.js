@@ -11,7 +11,7 @@ const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
       <SafeAreaView>
-        <HeaderComp />
+        <HeaderComp goBack={() => navigation.goBack} />
         <Text>This is Home Screen</Text>
         <Button onPress={goToScreen} title="Go To Profile" />
       </SafeAreaView>
