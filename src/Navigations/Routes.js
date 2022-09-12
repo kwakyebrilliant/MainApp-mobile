@@ -9,7 +9,9 @@ const Stack = createNativeStackNavigator();
 function Routes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={navigationStrings.HOME}>
+      <Stack.Navigator
+        initialRouteName={navigationStrings.HOME}
+        screenOptions={{headerShown: false}}>
         <Stack.Screen
           options={{title: 'My Home'}}
           name={navigationStrings.HOME}
