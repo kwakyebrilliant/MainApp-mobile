@@ -1,10 +1,13 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 
-const HeaderComp = () => {
+const HeaderComp = ({goBack}) => {
   return (
     <View>
-      <Text>Header</Text>
+      <TouchableOpacity>
+        <Text>Go Back</Text>
+      </TouchableOpacity>
+      <Text>{}</Text>
     </View>
   );
 };
