@@ -5,7 +5,7 @@ const HeaderComp = ({goBack = () => {}, text}) => {
   return (
     <View>
       <TouchableOpacity onPress={goBack}>
-        <Text>{text}</Text>
+        <Text>GoBack</Text>
       </TouchableOpacity>
       <Text>{text}</Text>
     </View>
