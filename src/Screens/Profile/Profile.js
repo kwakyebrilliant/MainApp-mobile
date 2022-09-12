@@ -2,7 +2,8 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import styles from './styles';
 
-const Profile = () => {
+const Profile = (props) => {
+  console.log('props', props);
   return (
     <View style={styles.container}>
       <Text>Profile</Text>
