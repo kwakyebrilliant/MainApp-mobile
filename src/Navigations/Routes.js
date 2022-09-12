@@ -11,7 +11,8 @@ function Routes() {
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName={navigationStrings.HOME}
-        screenOptions={{headerShown: false}}>
+        // screenOptions={{headerShown: false}}
+      >
         <Stack.Screen
           options={{title: 'My Home'}}
           name={navigationStrings.HOME}
