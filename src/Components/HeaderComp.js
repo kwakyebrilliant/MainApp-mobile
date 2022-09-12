@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 
-const HeaderComp = ({goBack}) => {
+const HeaderComp = ({goBack = () => {}, text}) => {
   return (
     <View>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={goBack}>
         <Text>Go Back</Text>
       </TouchableOpacity>
       <Text>{}</Text>
