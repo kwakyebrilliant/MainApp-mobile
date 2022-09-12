@@ -4,13 +4,12 @@ import navigationStrings from '../../constants/navigationStrings';
 import styles from './styles';
 
 const Home = ({navigation}) => {
-  console.log('props available', navigation);
+  const goToScreen = () => {
+    navigation.navigate(navigationStrings.PROFILE, {titile: 'Subscribe'});
+  };
   return (
     <View style={styles.container}>
-      <Button
-        onPress={() => navigation.navigate(navigationStrings.PROFILE)}
-        title="Go To Profile"
-      />
+      <Button onPress={goToScreen} title="Go To Profile" />
     </View>
   );
 };
