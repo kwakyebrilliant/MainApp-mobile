@@ -3,7 +3,8 @@ import {View, Text} from 'react-native';
 import styles from './styles';
 
 const Profile = (props) => {
-  console.log('props', props);
+  const {navigation, route} = props;
+  console.log('routes', route);
   return (
     <View style={styles.container}>
       <Text>Profile</Text>
