@@ -2,7 +2,7 @@ import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 
-const HeaderComp = ({goBack = () => {}, text}) => {
+const HeaderComp = ({goBack, text}) => {
     const navigation = useNavigation();
   return (
     <View
@@ -11,7 +11,7 @@ const HeaderComp = ({goBack = () => {}, text}) => {
         justifyContent: 'space-between',
         height: 42,
       }}>
-      <TouchableOpacity onPress={() => navigation.goBack()}>
+      <TouchableOpacity onPress={!!goBack ? goBack : () => navigation.goBack()}>
         <Text>GoBack</Text>
       </TouchableOpacity>
       <Text>{text}</Text>
