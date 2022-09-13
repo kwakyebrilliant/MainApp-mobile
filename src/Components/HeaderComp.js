@@ -1,9 +1,14 @@
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 
-const HeaderComp = ({goBack = () => { }, text}) => {
+const HeaderComp = ({goBack = () => {}, text}) => {
   return (
-    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+    <View
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        height: 42,
+      }}>
       <TouchableOpacity onPress={goBack}>
         <Text>GoBack</Text>
       </TouchableOpacity>
