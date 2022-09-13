@@ -14,7 +14,6 @@ const Profile = ({navigation, route}) => {
     <View style={styles.container}>
       <SafeAreaView>
         <HeaderComp goBack={() => navigation.goBack} text="Profile Screen" />
-        <Text>This is Profile Screen</Text>
         <Text>This is params data: {title}</Text>
         <Text>Profile</Text>
         <Button onPress={goToScreen} title="Go To Explore" />
