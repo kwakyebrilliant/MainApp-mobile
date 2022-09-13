@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 
-const HeaderComp = ({goBack = () => {}, text}) => {
+const HeaderComp = ({goBack = () => {}, text, navigation}) => {
   return (
     <View
       style={{
@@ -9,7 +9,7 @@ const HeaderComp = ({goBack = () => {}, text}) => {
         justifyContent: 'space-between',
         height: 42,
       }}>
-      <TouchableOpacity onPress={goBack}>
+      <TouchableOpacity onPress={() => navigation.goBack()}>
         <Text>GoBack</Text>
       </TouchableOpacity>
       <Text>{text}</Text>
