@@ -12,11 +12,13 @@ const Profile = ({navigation, route}) => {
   };
   return (
     <View style={styles.container}>
-      <Text>This is Profile Screen</Text>
-      <Text>This is params data: {title}</Text>
-      <Text>Profile</Text>
-      <Button onPress={goToScreen} title="Go To Explore" />
-      <Button onPress={() => navigation.goBack()} title="Go Back" />
+      <SafeAreaView>
+        <Text>This is Profile Screen</Text>
+        <Text>This is params data: {title}</Text>
+        <Text>Profile</Text>
+        <Button onPress={goToScreen} title="Go To Explore" />
+        <Button onPress={() => navigation.goBack()} title="Go Back" />
+      </SafeAreaView>
     </View>
   );
 };
