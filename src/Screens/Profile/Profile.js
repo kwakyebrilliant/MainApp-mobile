@@ -13,6 +13,7 @@ const Profile = ({navigation, route}) => {
   return (
     <View style={styles.container}>
       <SafeAreaView>
+        <HeaderComp />
         <Text>This is Profile Screen</Text>
         <Text>This is params data: {title}</Text>
         <Text>Profile</Text>
