@@ -1,29 +1,18 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Home, Profile, Explore} from '../Screens';
-import navigationStrings from '../constants/navigationStrings';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {View, Text, Button} from 'react-native';
+import navigationStrings from '../../constants/navigationStrings';
+import styles from '../Home/styles';
 
-const Stack = createNativeStackNavigator();
-const Tab = createBottomTabNavigator();
-
-function Routes() {
+const Profile = ({navigation}) => {
+  const goToScreen = () => {
+    navigation.popToTop();
+  };
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName={navigationStrings.HOME}
-        screenOptions={{headerShown: false}}>
-        <Tab.Screen
-          options={{title: 'My Home'}}
-          name={navigationStrings.HOME}
-          component={Home}
-        />
-        <Tab.Screen name={navigationStrings.PROFILE} component={Profile} />
-        <Tab.Screen name={navigationStrings.EXPLORE} component={Explore} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <View style={styles.container}>
+      <Text>Profile</Text>
+      <Button onPress={goToScreen} title="Go Back" />
+    </View>
   );
-}
+};
 
-export default Routes;
+export default Profile;
