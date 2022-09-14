@@ -9,9 +9,7 @@ const Tab = createBottomTabNavigator();
 function Routes() {
   return (
     <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName={navigationStrings.HOME}
-        screenOptions={{headerShown: false}}>
+      <Tab.Navigator initialRouteName={navigationStrings.HOME}>
         <Tab.Screen
           options={{title: 'My Home'}}
           name={navigationStrings.HOME}
