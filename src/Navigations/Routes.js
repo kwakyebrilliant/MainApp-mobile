@@ -1,15 +1,25 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import MainStack from './MainStack';
+import {Home, Profile, Explore} from '../Screens';
+import navigationStrings from '../constants/navigationStrings';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 function Routes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator />
-      {MainStack(Stack)}
+      <Tab.Navigator
+        initialRouteName={navigationStrings.HOME}
+        screenOptions={{headerShown: false}}>
+        <Tab.Screen
+          options={{title: 'My Home'}}
+          name={navigationStrings.HOME}
+          component={Home}
+        />
+        <Tab.Screen name={navigationStrings.PROFILE} component={Profile} />
+        <Tab.Screen name={navigationStrings.EXPLORE} component={Explore} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
