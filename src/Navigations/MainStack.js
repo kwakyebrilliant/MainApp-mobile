@@ -4,7 +4,7 @@ import navigationStrings from '../constants/navigationStrings';
 export default function (Stack) {
   return (
     <>
-      <Stack.Screen name={navigationStrings}/>
+      <Stack.Screen name={navigationStrings.TABS} />
     </>
   );
 }
