@@ -11,17 +11,7 @@ const Tab = createBottomTabNavigator();
 function Routes() {
   return (
     <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName={navigationStrings.HOME}
-        screenOptions={{headerShown: false}}>
-        <Tab.Screen
-          options={{title: 'My Home'}}
-          name={navigationStrings.HOME}
-          component={Home}
-        />
-        <Tab.Screen name={navigationStrings.PROFILE} component={Profile} />
-        <Tab.Screen name={navigationStrings.EXPLORE} component={Explore} />
-      </Tab.Navigator>
+      <Stack.Navigator />
     </NavigationContainer>
   );
 }
