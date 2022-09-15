@@ -4,7 +4,7 @@ import {Home, Profile, Explore} from '../Screens';
 import navigationStrings from '../constants/navigationStrings';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-const Tab = createBottomTabNavigator(); 
+const Tab = createBottomTabNavigator();
 
 function Routes() {
   return (
