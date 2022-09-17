@@ -14,7 +14,7 @@ function Routes() {
           options={{title: 'My Home'}}
           name={navigationStrings.HOME}
           component={Home}
-        /> 
+        />
         <Tab.Screen name={navigationStrings.PROFILE} component={Profile} />
         <Tab.Screen name={navigationStrings.EXPLORE} component={Explore} />
       </Tab.Navigator>
