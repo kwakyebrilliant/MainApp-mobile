@@ -21,8 +21,24 @@ function Routes() {
           name={navigationStrings.HOME}
           component={Home}
         />
-        <Tab.Screen name={navigationStrings.PROFILE} component={Profile} />
-        <Tab.Screen name={navigationStrings.EXPLORE} component={Explore} />
+        <Tab.Screen
+          name={navigationStrings.PROFILE}
+          component={Profile}
+          options={{
+            tabBarIcon: ({size, color}) => (
+              <IconAntDesign name={'user'} color={color} size={size} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name={navigationStrings.EXPLORE}
+          component={Explore}
+          options={{
+            tabBarIcon: ({size, color}) => (
+              <IconAntDesign name={'search1'} color={color} size={size} />
+            ),
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
