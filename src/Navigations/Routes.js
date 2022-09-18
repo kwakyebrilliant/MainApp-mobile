@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {Home, Profile, Explore} from '../Screens';
 import navigationStrings from '../constants/navigationStrings';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import IconAntDesign from 'react-native-vector-icons/AntDesign';
 
 const Tab = createBottomTabNavigator();
 
@@ -11,7 +12,12 @@ function Routes() {
     <NavigationContainer>
       <Tab.Navigator initialRouteName={navigationStrings.HOME}>
         <Tab.Screen
-          options={{title: 'My Home'}}
+          options={{
+            title: 'My Home',
+            tabBarIcon: ({size, color}) => (
+              <IconAntDesign name={'home'} color={color} size={size} />
+            ),
+          }}
           name={navigationStrings.HOME}
           component={Home}
         />
