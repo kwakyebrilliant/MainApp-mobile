@@ -20,7 +20,7 @@ const Home = () => {
       source={item}
       style={{
         width: 160,
-        height: 160,
+        height: 140,
         marginHorizontal: 10,
       }}
       resizeMode="contain"
