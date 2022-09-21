@@ -4,8 +4,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  flatlist: {
-    justifyContent: 'space-between',
+  text: {
+    justifyContent: 'center',
+    fontSize: 20,
+    alignSelf: 'center',
+    color: '#fff',
   },
 });
 

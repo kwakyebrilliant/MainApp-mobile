@@ -19,13 +19,13 @@ const Home = () => {
     <ImageBackground
       source={item}
       style={{
-        width: 160,
-        height: 140,
-        marginHorizontal: 10,
+        width: 180,
+        height: 200,
         marginVertical: 10,
+        backgroundColor: '#000',
       }}
       resizeMode="cover">
-      <Text>Hi</Text>
+      <Text style={styles.text}>Hi</Text>
     </ImageBackground>
   );
 
@@ -33,7 +33,7 @@ const Home = () => {
     <View style={styles.container}>
       <View style={{flex: 1, margin: 10}}>
         <FlatList
-          columnWrapperStyle={styles.flatlist}
+          columnWrapperStyle={{justifyContent: 'space-between'}}
           keyExtractor={(_, index) => index.toString()}
           data={images}
           numColumns={2}
