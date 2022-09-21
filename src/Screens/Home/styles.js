@@ -5,8 +5,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   flatlist: {
-    flex: 1,
-    margin: 10,
+    justifyContent: 'space-between',
   },
 });
 

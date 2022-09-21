@@ -31,9 +31,9 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.flatlist}>
+      <View style={{flex: 1, margin: 10}}>
         <FlatList
-          columnWrapperStyle={{justifyContent: 'space-between'}}
+          columnWrapperStyle={styles.flatlist}
           keyExtractor={(_, index) => index.toString()}
           data={images}
           numColumns={2}
