@@ -31,7 +31,7 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-      <View style={{flex: 1, margin: 10}}>
+      <View style={styles.flatlist}>
         <FlatList
           columnWrapperStyle={{justifyContent: 'space-between'}}
           keyExtractor={(_, index) => index.toString()}
