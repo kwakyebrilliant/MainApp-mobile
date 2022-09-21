@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {View, Text, FlatList, Image} from 'react-native';
 import styles from '../Home/styles';
@@ -18,13 +19,21 @@ const Home = () => {
         width: '50%',
         height: 200,
       }}
-      resizeMode="cover"
+      resizeMode="contain"
     />
   );
 
   return (
     <View style={styles.container}>
-      <Text>Home alone</Text>
+      <View style={{flex: 1, margin: 10, paddingHorizontal: 10}}>
+        <FlatList
+          columnWrapperStyle={{justifyContent: 'space-between'}}
+          keyExtractor={(_, index) => index.toString()}
+          data={images}
+          numColumns={2}
+          renderItem={_renderItem}
+        />
+      </View>
     </View>
   );
 };
