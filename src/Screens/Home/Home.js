@@ -22,10 +22,9 @@ const Home = () => {
         width: 180,
         height: 200,
         marginVertical: 10,
-        backgroundColor: '#000',
       }}
       resizeMode="cover">
-      <Text style={styles.text}>Hi</Text>
+      <Text style={styles.text}>Kofi is here</Text>
     </ImageBackground>
   );
 

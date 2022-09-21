@@ -6,9 +6,13 @@ const styles = StyleSheet.create({
   },
   text: {
     justifyContent: 'center',
-    fontSize: 20,
+    fontSize: 25,
+    fontWeight: 'bold',
     alignSelf: 'center',
     color: '#fff',
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.5,
   },
 });
 
