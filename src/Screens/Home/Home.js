@@ -5,19 +5,23 @@ import styles from '../Home/styles';
 
 const Home = () => {
   const images = [
-    require('../../../assets/done.png'),
-    require('../../../assets/done.png'),
-    require('../../../assets/done.png'),
-    require('../../../assets/done.png'),
-    require('../../../assets/done.png'),
+    require('../../../assets/hunger.jpeg'),
+    require('../../../assets/hunger.jpeg'),
+    require('../../../assets/hunger.jpeg'),
+    require('../../../assets/hunger.jpeg'),
+    require('../../../assets/hunger.jpeg'),
+    require('../../../assets/hunger.jpeg'),
+    require('../../../assets/hunger.jpeg'),
+    require('../../../assets/hunger.jpeg'),
   ];
 
   const _renderItem = ({item, index}) => (
     <Image
       source={item}
       style={{
-        width: '50%',
-        height: 200,
+        width: 160,
+        height: 160,
+        marginHorizontal: 10,
       }}
       resizeMode="contain"
     />
@@ -25,7 +29,7 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-      <View style={{flex: 1, margin: 10, paddingHorizontal: 10}}>
+      <View style={{flex: 1, margin: 10}}>
         <FlatList
           columnWrapperStyle={{justifyContent: 'space-between'}}
           keyExtractor={(_, index) => index.toString()}
